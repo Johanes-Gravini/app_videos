@@ -27,8 +27,6 @@ class VideoController extends Controller
 
     public function store(Request $request)
     {
-
-        
         Video::create($request->all());
         return redirect()->route('videos.index')->with('success', 'Video created successfully.');
     }
